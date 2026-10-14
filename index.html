@@ -162,6 +162,25 @@
     @keyframes hero-orbit{to{transform:rotate(360deg)}}@keyframes cue-bob{50%{transform:translateY(4px)}}
     @media(max-width:700px){.hero-art:hover .journey-panel{transform:none}.journey-panel{transform:none}.dlab-node:hover,.dlab-node:focus-visible,.dlab-node[aria-pressed="true"]{transform:translateY(-3px)}.process-step:hover,.process-step.is-active,.mission-card:hover,.project-card:hover,.location-card:hover,.capability-card:hover{transform:translateY(-3px)}}
     @media(prefers-reduced-motion:reduce){.hero:after,.scroll-cue:after{animation:none!important}.hero-art .journey-panel,.process-step,.mission-card,.capability-card,.project-card,.location-card,.dlab-node,.ax-points article{transition:none!important;transform:none!important}}
+    /* Flush, square-edged editorial panels */
+    .brand-mark,.contact-link,.button,.scroll-top,.scroll-cue:after,.journey-panel,.journey-float,.platform-mark,.mission-card,.process-step,.capability-card,.capability-icon,.project-card,.location-card,.dlab-visual,.dlab-node,.ax-intro,.ax-points article,.about-visual,.tech-card,.card-icon,.filter-chip,.support-feature,.support-tile,.news-item,.need-card,.need-symbol{border-radius:0!important}
+    .mission-grid,.process-grid,.capability-grid,.project-grid,.location-grid{gap:0;border-top:1px solid #d6dcea;border-left:1px solid #d6dcea}
+    .mission-card,.process-step,.capability-card,.project-card,.location-card,.ax-points article{border:0;border-right:1px solid #d6dcea;border-bottom:1px solid #d6dcea;box-shadow:none}
+    .mission-card{background:#f0efff}.mission-card:nth-child(2){background:#e7faf4}.mission-card:nth-child(3){background:#fff0e9}
+    .process-step:nth-child(4n+1){background:#f0efff}.process-step:nth-child(4n+2){background:#e6faf4}.process-step:nth-child(4n+3){background:#fff1e8}.process-step:nth-child(4n){background:#eaf3ff}
+    .capability-card:nth-child(4n+1){background:linear-gradient(135deg,#f0efff,#e7e5ff)}.capability-card:nth-child(4n+2){background:linear-gradient(135deg,#e7faf4,#d9f5ec)}.capability-card:nth-child(4n+3){background:linear-gradient(135deg,#fff0e9,#ffe5d8)}.capability-card:nth-child(4n){background:linear-gradient(135deg,#eaf3ff,#deecff)}
+    .project-card:nth-child(3n+1){background:#f0efff}.project-card:nth-child(3n+2){background:#fff0e9}.project-card:nth-child(3n){background:#e7faf4}
+    .location-card{background:#f0efff}.location-card:nth-child(2){background:#e7faf4}
+    .mission-card:hover,.project-card:hover,.location-card:hover,.process-step:hover,.process-step.is-active,.capability-card:hover{transform:none;box-shadow:none;border-color:#b9b1ff}
+    .mission-card:after,.capability-card:after,.project-card:after{content:'';position:absolute;left:0;top:0;bottom:0;width:5px;background:var(--panel-accent,#6558f5);opacity:.9;transition:width var(--motion-smooth) var(--motion-ease)}
+    .mission-card:nth-child(2),.capability-platform,.project-card:nth-child(3n){--panel-accent:#23bda5}.mission-card:nth-child(3),.capability-field,.project-card:nth-child(3n+2){--panel-accent:#ff8469}.capability-device{--panel-accent:#4687ed}
+    .mission-card:hover:after,.capability-card:hover:after,.project-card:hover:after{width:9px}
+    .process-step>span{border-radius:0;background:#6658ed;color:#fff}.process-step.is-active>span{transform:none;background:#24bca6}
+    .dlab-flow{gap:0}.dlab-node{border-right:0!important}.dlab-flow .dlab-node:last-of-type{border-right:1px solid #ffffff26!important}.dlab-flow>i{display:grid;place-items:center;min-width:20px;align-self:stretch;background:#ffffff0d}
+    .ax-points{gap:0;border-top:1px solid #d6dcea;border-left:1px solid #d6dcea}.ax-points article{border-radius:0;margin:0}.ax-points article:hover{transform:none;box-shadow:none;background:#f3f1ff}
+    .journey-panel{backdrop-filter:blur(18px)}
+    @media(max-width:1100px){.process-step:nth-child(4n+1),.process-step:nth-child(4n+2),.process-step:nth-child(4n+3),.process-step:nth-child(4n){background:#fff}.process-step:nth-child(4n+1){background:#f0efff}.process-step:nth-child(4n+2){background:#e7faf4}.process-step:nth-child(4n+3){background:#fff0e9}.process-step:nth-child(4n){background:#eaf3ff}}
+    @media(max-width:700px){.process-step:nth-child(4n+1),.process-step:nth-child(4n+2),.process-step:nth-child(4n+3),.process-step:nth-child(4n){background:#fff}.process-step:nth-child(4n+1){background:#f0efff}.process-step:nth-child(4n+2){background:#e7faf4}.process-step:nth-child(4n+3){background:#fff0e9}.process-step:nth-child(4n){background:#eaf3ff}}
   </style>
 </head>
 <body>
