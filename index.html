@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#071a36">
-  <meta name="description" content="강원ICT융합연구원은 AI·빅데이터·IoT 기술로 기업의 디지털 전환과 성장을 함께합니다.">
+  <meta name="description" content="강원ICT융합연구원은 AI·ICT 융합 연구개발과 지역 산업 연계 실증 연구를 수행하는 공공 연구기관입니다.">
   <title>강원ICT융합연구원 | GRIT</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -129,6 +129,39 @@
     @media(max-width:1100px){.mission-grid,.project-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:700px){.overview,.regional-section{padding-block:70px}.mission-grid,.project-grid{grid-template-columns:1fr;gap:12px}.mission-card{min-height:0;padding:23px}.mission-card h3{margin:18px 0 10px}.project-card{min-height:0;padding:23px}.project-card h3{margin:18px 0 10px}.project-card p{min-height:0}.project-news-link{margin-top:22px}}
     @media(prefers-reduced-motion:reduce){.project-card,.ax-intro .text-link .arrow{transition:none!important}}
+    /* Brighter research palette, scroll cues, and tactile interactions */
+    :root{--motion-slow:720ms;--accent-lime:#dcff59;--accent-coral:#ff836b;--accent-violet:#7565ff;--accent-teal:#37dfc2}
+    .hero{background:radial-gradient(ellipse at 82% 35%,#6052df 0,transparent 32%),radial-gradient(ellipse at 58% 90%,#087f91 0,transparent 28%),linear-gradient(122deg,#121e53 0%,#263894 55%,#163b68 100%)}
+    .hero:before{background-image:radial-gradient(circle at 76% 42%,#dcff5914 0 1px,transparent 1.5px),linear-gradient(#dbe1ff10 1px,transparent 1px),linear-gradient(90deg,#dbe1ff10 1px,transparent 1px);background-size:38px 38px,76px 76px,76px 76px;mask-image:linear-gradient(90deg,transparent,#000 48%)}
+    .hero:after{border-color:#b3aaff42;box-shadow:0 0 0 80px #8779ff12,0 0 0 160px #43e0c20b,0 0 0 240px #ff836b08;animation:hero-orbit 32s linear infinite}
+    .hero h1 em{color:var(--accent-lime);text-shadow:0 0 35px #dcff5930}.hero-kicker i{background:var(--accent-lime);box-shadow:0 0 18px var(--accent-lime)}
+    .hero-art{perspective:1000px}.journey-panel{transform:rotateY(-4deg) rotateX(2deg);transition:transform 700ms cubic-bezier(.2,.75,.2,1),box-shadow 700ms}.hero-art:hover .journey-panel{transform:rotateY(0) rotateX(0) translateY(-5px);box-shadow:0 40px 110px #07133870}.journey-status i{background:var(--accent-lime);box-shadow:0 0 15px var(--accent-lime)}
+    .float-one{background:linear-gradient(120deg,#dcff59,#a4efa4);color:#263577;border:0}.float-two{background:linear-gradient(120deg,#ff9b7c,#f6a9df);color:#42295f;border:0}
+    .scroll-cue:after{content:'↓';display:grid;place-items:center;width:23px;height:23px;border:1px solid #ffffff55;border-radius:50%;color:var(--accent-lime);font-size:13px;animation:cue-bob 1.8s ease-in-out infinite}
+    .overview{background:linear-gradient(180deg,#f7f7ff,#fff 72%)}.process{background:linear-gradient(135deg,#edfbf8,#f4f3ff 75%)}
+    .mission-card,.process-step,.capability-card,.project-card,.location-card{position:relative;isolation:isolate;overflow:hidden}
+    .mission-card:before,.process-step:before,.capability-card:before,.project-card:before,.location-card:before{content:'';position:absolute;inset:0;z-index:-1;opacity:0;background:radial-gradient(240px circle at var(--spot-x,50%) var(--spot-y,50%),var(--spot-color,#8e85ff38),transparent 72%);transition:opacity var(--motion-smooth) var(--motion-ease)}
+    .mission-card:hover:before,.mission-card:focus-within:before,.process-step:hover:before,.process-step.is-active:before,.capability-card:hover:before,.capability-card:focus-within:before,.project-card:hover:before,.project-card:focus-within:before,.location-card:hover:before{opacity:1}
+    .mission-card:nth-child(2),.capability-platform,.project-card:nth-child(2){--spot-color:#8b7aff35}.mission-card:nth-child(3),.capability-field,.project-card:nth-child(3){--spot-color:#35d7bb42}.capability-device{--spot-color:#ffad6840}
+    .mission-card,.project-card,.location-card,.process-step,.capability-card{transition:transform var(--motion-smooth) var(--motion-ease),box-shadow var(--motion-smooth) var(--motion-ease),border-color var(--motion-smooth) var(--motion-ease),background-color var(--motion-smooth) var(--motion-ease)}
+    .mission-card:hover,.project-card:hover,.location-card:hover,.process-step:hover,.capability-card:hover{transform:translateY(-7px) scale(1.012);box-shadow:0 22px 50px #25215f17}
+    .process-step{border-color:#e2e8f3}.process-step>span{display:grid;place-items:center;width:34px;height:34px;border-radius:12px;background:#efedff;color:#6355e8;transition:background var(--motion-smooth),color var(--motion-smooth),transform var(--motion-smooth)}
+    .process-step.is-active{border-color:#b9b1ff;transform:translateY(-5px);box-shadow:0 18px 44px #6458dc18}.process-step.is-active>span{background:linear-gradient(135deg,#6d5df4,#38cbb8);color:#fff;transform:rotate(-8deg) scale(1.08)}
+    .capability-card:nth-child(1){--cap-bg:#e8e8ff}.capability-ai .capability-icon{background:linear-gradient(145deg,#ece9ff,#dcd8ff);color:#5c4ce0}
+    .capability-card:nth-child(2) .capability-icon{background:linear-gradient(145deg,#e2fbf4,#c9f5e7)}.capability-card:nth-child(3) .capability-icon{background:linear-gradient(145deg,#fff0e8,#ffe1d0)}.capability-card:nth-child(4) .capability-icon{background:linear-gradient(145deg,#e8f3ff,#d5e8ff);color:#367bdb}
+    .dlab-section{background:radial-gradient(circle at 12% 92%,#ec8a763b 0,transparent 27%),radial-gradient(circle at 92% 8%,#48e1c649 0,transparent 31%),linear-gradient(120deg,#191c59,#303994 58%,#164969)}
+    .dlab-node{position:relative;min-width:0;color:#fff;font-family:inherit;text-align:left;cursor:pointer;transition:transform var(--motion-smooth),background var(--motion-smooth),border-color var(--motion-smooth),box-shadow var(--motion-smooth)}
+    .dlab-node:hover,.dlab-node:focus-visible,.dlab-node[aria-pressed="true"]{transform:translateY(-6px);border-color:#dcff59a8;background:linear-gradient(145deg,#ffffff28,#ffffff0d);box-shadow:0 14px 32px #07133845,0 0 0 1px #dcff5930}
+    .dlab-node[aria-pressed="true"]>span{color:var(--accent-lime)}.dlab-node:focus-visible{outline:3px solid var(--accent-lime);outline-offset:3px}
+    .dlab-flow>i{transition:transform var(--motion-smooth),color var(--motion-smooth)}.dlab-visual:has(.dlab-node[aria-pressed="true"]) .dlab-flow>i{color:var(--accent-lime);transform:translateX(3px)}
+    .dlab-stage-detail{min-height:42px;margin:0 0 20px;padding:12px 15px;border-left:2px solid var(--accent-lime);background:#ffffff0b;color:#c9d8f4;font-size:11px;line-height:1.7;transition:opacity var(--motion-smooth),transform var(--motion-smooth)}.dlab-stage-detail strong{display:block;margin-bottom:2px;color:var(--accent-lime);font-size:12px}
+    .ax-section{background:linear-gradient(130deg,#edf2ff,#e8fbf5 56%,#fff5ed)}.ax-intro{background:radial-gradient(circle at 0 100%,#ff8e7a55,transparent 34%),radial-gradient(circle at 100% 0,#51e1c566,transparent 45%),linear-gradient(140deg,#29368c,#343885)}
+    .ax-points article{transition:transform var(--motion-smooth),box-shadow var(--motion-smooth),border-color var(--motion-smooth)}.ax-points article:hover{transform:translateX(7px);border-color:#b8b1ff;box-shadow:0 14px 35px #26215812}
+    .project-card:nth-child(1){background:linear-gradient(145deg,#fff,#f1f0ff)}.project-card:nth-child(2){background:linear-gradient(145deg,#fff,#fff2ed)}.project-card:nth-child(3){background:linear-gradient(145deg,#fff,#eafaf5)}
+    .nav-links a[aria-current="location"]{color:#584add}.nav-links a[aria-current="location"]:after{width:100%}
+    @keyframes hero-orbit{to{transform:rotate(360deg)}}@keyframes cue-bob{50%{transform:translateY(4px)}}
+    @media(max-width:700px){.hero-art:hover .journey-panel{transform:none}.journey-panel{transform:none}.dlab-node:hover,.dlab-node:focus-visible,.dlab-node[aria-pressed="true"]{transform:translateY(-3px)}.process-step:hover,.process-step.is-active,.mission-card:hover,.project-card:hover,.location-card:hover,.capability-card:hover{transform:translateY(-3px)}}
+    @media(prefers-reduced-motion:reduce){.hero:after,.scroll-cue:after{animation:none!important}.hero-art .journey-panel,.process-step,.mission-card,.capability-card,.project-card,.location-card,.dlab-node,.ax-points article{transition:none!important;transform:none!important}}
   </style>
 </head>
 <body>
@@ -203,11 +236,12 @@
         <div class="dlab-visual" aria-label="D-Lab Flow의 AI 개발 단계">
           <div class="dlab-visual-head"><span><i></i> AI DEVELOPMENT WORKFLOW</span><b>D-Lab Flow</b></div>
           <div class="dlab-flow">
-            <div class="dlab-node"><span>01</span><b>데이터</b><small>수집 · 정리</small></div><i>→</i>
-            <div class="dlab-node"><span>02</span><b>라벨링</b><small>데이터셋 구성</small></div><i>→</i>
-            <div class="dlab-node"><span>03</span><b>모델</b><small>학습 · 최적화</small></div><i>→</i>
-            <div class="dlab-node"><span>04</span><b>운영</b><small>배포 · 관리</small></div>
+            <button class="dlab-node" type="button" data-stage="데이터 준비" data-detail="연구 목적에 맞춰 현장 데이터를 수집하고 정제해 AI 학습에 사용할 수 있도록 준비합니다." aria-pressed="true"><span>01</span><b>데이터</b><small>수집 · 정리</small></button><i>→</i>
+            <button class="dlab-node" type="button" data-stage="데이터셋 구성" data-detail="데이터를 분류하고 라벨링해 검증 가능한 학습 데이터셋으로 구성합니다." aria-pressed="false"><span>02</span><b>라벨링</b><small>데이터셋 구성</small></button><i>→</i>
+            <button class="dlab-node" type="button" data-stage="모델 학습" data-detail="연구 과제에 맞는 모델을 학습하고 성능을 비교해 최적화합니다." aria-pressed="false"><span>03</span><b>모델</b><small>학습 · 최적화</small></button><i>→</i>
+            <button class="dlab-node" type="button" data-stage="현장 운영" data-detail="개발한 모델을 현장에 배포하고 운영 환경에서 관리·개선합니다." aria-pressed="false"><span>04</span><b>운영</b><small>배포 · 관리</small></button>
           </div>
+          <div class="dlab-stage-detail" id="dlab-stage-detail" aria-live="polite"><strong>데이터 준비</strong>연구 목적에 맞춰 현장 데이터를 수집하고 정제해 AI 학습에 사용할 수 있도록 준비합니다.</div>
           <div class="dlab-visual-foot"><span>DATA</span><span>MODEL</span><span>DEPLOYMENT</span><span>MONITORING</span></div>
         </div>
       </div>
@@ -273,18 +307,44 @@
     updateScrollControls();
     scrollTopButton.addEventListener('click',()=>window.scrollTo({top:0,behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
 
-    const revealTargets=document.querySelectorAll('.section-heading,.mission-card,.process-step,.capability-card,.dlab-copy,.dlab-visual,.ax-intro,.ax-points article,.project-card,.location-head,.location-card');
+    const revealTargets=document.querySelectorAll('.hero-copy,.hero-art,.section-heading,.mission-card,.process-step,.capability-card,.dlab-copy,.dlab-visual,.ax-intro,.ax-points article,.project-card,.location-head,.location-card');
     if('IntersectionObserver' in window){
       document.documentElement.classList.add('has-scroll-reveal');
       const revealObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
-        if(entry.isIntersecting){entry.target.classList.add('is-visible');revealObserver.unobserve(entry.target)}
+        if(entry.isIntersecting){entry.target.classList.add('is-visible');if(entry.target.classList.contains('process-step'))entry.target.classList.add('is-active');revealObserver.unobserve(entry.target)}
       }),{threshold:.14,rootMargin:'0px 0px -36px 0px'});
       revealTargets.forEach((element,index)=>{
         element.classList.add('scroll-reveal');
         element.style.setProperty('--reveal-delay',`${(index%4)*75}ms`);
         revealObserver.observe(element);
       });
+
+      const navItems=[...document.querySelectorAll('.nav-links a[href^="#"]')];
+      const navSections=navItems.map(link=>document.querySelector(link.getAttribute('href'))).filter(Boolean);
+      const navObserver=new IntersectionObserver(entries=>{
+        const current=entries.filter(entry=>entry.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
+        if(!current)return;
+        navItems.forEach(link=>{
+          if(link.getAttribute('href')===`#${current.target.id}`)link.setAttribute('aria-current','location');
+          else link.removeAttribute('aria-current');
+        });
+      },{threshold:[.12,.3,.55],rootMargin:'-18% 0px -54% 0px'});
+      navSections.forEach(section=>navObserver.observe(section));
     }
+
+    document.querySelectorAll('.dlab-node').forEach(button=>button.addEventListener('click',()=>{
+      document.querySelectorAll('.dlab-node').forEach(node=>node.setAttribute('aria-pressed',String(node===button)));
+      const detail=document.getElementById('dlab-stage-detail');
+      detail.innerHTML=`<strong>${button.dataset.stage}</strong>${button.dataset.detail}`;
+    }));
+
+    document.querySelectorAll('.mission-card,.process-step,.capability-card,.project-card,.location-card').forEach(card=>{
+      card.addEventListener('pointermove',event=>{
+        const bounds=card.getBoundingClientRect();
+        card.style.setProperty('--spot-x',`${event.clientX-bounds.left}px`);
+        card.style.setProperty('--spot-y',`${event.clientY-bounds.top}px`);
+      },{passive:true});
+    });
   </script>
 </body>
 </html>
