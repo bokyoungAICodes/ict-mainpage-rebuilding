@@ -308,9 +308,9 @@
     @media(max-width:700px){.process-grid{grid-template-columns:1fr;gap:22px;background:linear-gradient(#d8def1,#d8def1) 20px 8px/2px calc(100% - 16px) no-repeat}.process-step{padding-left:62px}.process-step>span{width:42px;height:42px}.process-step p{max-width:none}.stream-card{min-height:0;padding:24px!important}.stream-card p{font-size:12px}.news-item:after{display:none}}
     @media(prefers-reduced-motion:reduce){.hero-art .orb:before,.hero-art .orb:after{animation:none!important}.capability-icon,.process-step>span,.stream-card,.stream-card:before,.stream-card:after,.stream-icon,.news-item:after{transition:none!important}}
     /* D-Lab workflow: bounded, high-contrast interactive steps */
-    .dlab-layout{width:min(100%,1600px);margin-inline:auto;grid-template-columns:minmax(300px,.78fr) minmax(0,1.22fr);gap:clamp(44px,5vw,100px)}
-    .dlab-copy{max-width:510px}.dlab-copy .eyebrow{color:#c4c8ff!important}.dlab-copy .section-title{font-size:clamp(38px,4vw,66px);line-height:1.12}.dlab-copy .section-title em{color:#c0c5ff!important}
-    .dlab-visual{min-width:0;padding:clamp(24px,3vw,42px);border:1px solid #dbe5ff3d!important;border-radius:24px!important;background:linear-gradient(145deg,#ffffff13,#ffffff08)!important;box-shadow:0 28px 80px #07133335;backdrop-filter:blur(12px)}
+    .dlab-section>.wrap{display:block;width:calc(100% - clamp(36px,8vw,160px));margin-inline:auto}
+    .dlab-copy{max-width:900px;margin:0 auto clamp(38px,5vw,64px);text-align:center}.dlab-copy .eyebrow{justify-content:center;color:#c4c8ff!important}.dlab-copy .section-title{font-size:clamp(38px,4vw,66px);line-height:1.12;margin:20px 0 16px}.dlab-copy .section-title em{color:#c0c5ff!important}.dlab-copy>p{max-width:780px;margin-inline:auto}
+    .dlab-visual{width:min(100%,1680px);min-width:0;margin-inline:auto;padding:clamp(24px,3vw,42px);border:1px solid #dbe5ff3d!important;border-radius:24px!important;background:linear-gradient(145deg,#ffffff13,#ffffff08)!important;box-shadow:0 28px 80px #07133335;backdrop-filter:blur(12px)}
     .dlab-visual-head{margin-bottom:8px;color:#c3d3f4!important;font-size:11px!important}.dlab-visual-head b{color:#fff!important;font-size:15px!important}
     .dlab-visual-head i{background:#b8bcf5;box-shadow:0 0 14px #b8bcf5}
     .dlab-flow{grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr) 24px minmax(0,1fr);gap:5px;margin:25px 0 22px;align-items:stretch}
@@ -327,8 +327,8 @@
     .dlab-visual:has(.dlab-node:nth-of-type(1)[aria-pressed="true"]) .dlab-flow>i:nth-of-type(1),.dlab-visual:has(.dlab-node:nth-of-type(2)[aria-pressed="true"]) .dlab-flow>i:nth-of-type(2),.dlab-visual:has(.dlab-node:nth-of-type(3)[aria-pressed="true"]) .dlab-flow>i:nth-of-type(3){transform:translateX(3px);color:#fff!important}
     .dlab-stage-detail{min-height:64px;margin:0;padding:14px 16px;border-left:3px solid #b8bcf5!important;border-radius:0 10px 10px 0;background:#ffffff0d;color:#e0e8f7;font-size:12px;line-height:1.75;transition:background 380ms,border-color 380ms}
     .dlab-stage-detail strong{color:#d0d2ff!important;font-size:12px!important}.dlab-visual-foot{margin-top:18px;color:#aebfe0!important;font-size:9px;letter-spacing:.12em}
-    @media(max-width:1100px){.dlab-layout{width:min(100%,900px);grid-template-columns:1fr;gap:34px}.dlab-copy{max-width:720px}.dlab-copy .section-title{font-size:clamp(38px,6vw,60px)}.dlab-flow{grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr) 30px minmax(0,1fr) 30px minmax(0,1fr)}}
-    @media(max-width:700px){.dlab-layout{gap:28px}.dlab-visual{padding:20px!important;border-radius:18px!important}.dlab-flow{gap:4px;margin:22px 0 18px;grid-template-columns:minmax(0,1fr) 16px minmax(0,1fr) 16px minmax(0,1fr) 16px minmax(0,1fr)}.dlab-node{min-height:142px;padding:12px 10px!important;border-radius:12px!important}.dlab-node b{font-size:15px!important}.dlab-node small{font-size:9px!important}.dlab-node-icon{width:19px;height:19px}.dlab-flow>i{font-size:14px}.dlab-stage-detail{font-size:11px}.dlab-visual-foot{font-size:7px}}
+    @media(max-width:1100px){.dlab-section>.wrap{width:calc(100% - clamp(40px,7vw,84px))}.dlab-copy{max-width:760px}.dlab-copy .section-title{font-size:clamp(38px,6vw,60px)}.dlab-flow{grid-template-columns:minmax(0,1fr) 30px minmax(0,1fr) 30px minmax(0,1fr) 30px minmax(0,1fr)}}
+    @media(max-width:700px){.dlab-section>.wrap{width:calc(100% - 36px)}.dlab-copy{margin-bottom:30px}.dlab-visual{padding:20px!important;border-radius:18px!important}.dlab-flow{gap:4px;margin:22px 0 18px;grid-template-columns:minmax(0,1fr) 16px minmax(0,1fr) 16px minmax(0,1fr) 16px minmax(0,1fr)}.dlab-node{min-height:142px;padding:12px 10px!important;border-radius:12px!important}.dlab-node b{font-size:15px!important}.dlab-node small{font-size:9px!important}.dlab-node-icon{width:19px;height:19px}.dlab-flow>i{font-size:14px}.dlab-stage-detail{font-size:11px}.dlab-visual-foot{font-size:7px}}
     @media(max-width:430px){.dlab-flow{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.dlab-node{min-height:112px;padding:13px!important}.dlab-flow>i{display:none}.dlab-visual-foot{font-size:6px}}
     @media(prefers-reduced-motion:reduce){.dlab-node,.dlab-node-icon,.dlab-flow>i,.dlab-stage-detail{transition:none!important;transform:none!important}}
   </style>
@@ -396,7 +396,7 @@
     </section>
 
     <section class="dlab-section" id="dlab">
-      <div class="wrap dlab-layout">
+      <div class="wrap">
         <div class="dlab-copy">
           <div class="eyebrow">RESEARCH PLATFORM · D-LAB FLOW</div>
           <h2 class="section-title"><em>AI 연구개발 플랫폼</em></h2>
