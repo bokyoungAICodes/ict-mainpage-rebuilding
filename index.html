@@ -216,8 +216,7 @@
     .scroll-top{color:#2563eb}.mission-card{--spot-color:#2563eb2b}.mission-card:nth-child(2),.process-step:nth-child(even),.capability-card:nth-child(even),.project-card:nth-child(3n+2),.location-card:nth-child(2){--spot-color:#ef44362b}.mission-card:nth-child(3),.process-step:nth-child(odd),.capability-card:nth-child(odd),.project-card:nth-child(3n),.location-card{--spot-color:#2563eb2b}.capability-device{--spot-color:#ef44362b}.tech-card{--card-glow:#e4ecff}.tech-card:nth-child(2),.tech-card:nth-child(4){--card-glow:#ffe5e1}.tech-card:nth-child(3){--card-glow:#e4ecff}
     @media(max-width:1100px){.process-step:nth-child(4n+1),.process-step:nth-child(4n+3){background:#eaf1ff}.process-step:nth-child(4n+2),.process-step:nth-child(4n){background:#fff0ed}}
     @media(max-width:700px){.process-step:nth-child(4n+1),.process-step:nth-child(4n+3){background:#eaf1ff}.process-step:nth-child(4n+2),.process-step:nth-child(4n){background:#fff0ed}}
-    /* Quiet, oversized keyword panels */
-    .topbar,.eyebrow,.section-intro,.hero-kicker,.hero-copy>p,.hero-index,.journey-float,.journey-panel-top,.journey-flow>div>span,.journey-flow small,.journey-platform small,.mission-card>span,.mission-card p,.process-step>span,.process-step p,.capability-label,.capability-card p,.dlab-copy>p,.dlab-visual-head>span,.dlab-node>span,.dlab-node small,.dlab-stage-detail,.dlab-visual-foot,.ax-intro>p,.ax-intro .text-link,.ax-points article>span,.ax-points p,.project-kind,.project-card p,.project-card>a,.project-news-link,.loc-tag,.location-card p,.footer-address,.brand-name span,.lang{display:none!important}
+    /* Restore the explanations and supporting labels alongside the large keywords. */
     .hero-bottom .wrap{justify-content:flex-end}.hero-bottom .wrap>span:first-child{display:none}.scroll-cue{font-size:0}.section-title{font-size:clamp(42px,5.2vw,70px);line-height:1.12;margin:0 0 18px}.nav-links{font-size:14px}.nav-links a{padding-block:28px}
     .hero h1{font-size:clamp(56px,7vw,92px);line-height:1.05;margin:0 0 32px}.hero-copy{max-width:900px}.hero-ctas{margin-top:30px}.hero-ctas .button{font-size:15px;min-height:58px;padding-inline:24px}
     .journey-panel,.dlab-visual,.ax-intro,.about-visual{background:transparent!important;backdrop-filter:none;box-shadow:none;border-color:#ffffff70}.journey-panel{padding:clamp(24px,4vw,60px)}.journey-title{font-size:clamp(42px,5vw,76px);margin:18px 0 34px}.journey-flow{padding:28px 0}.journey-flow b{font-size:clamp(17px,1.8vw,25px)}.journey-platform b{font-size:18px}.journey-flow>i{font-size:20px}
@@ -265,6 +264,17 @@
     .tech-card:nth-child(2),.tech-card:nth-child(4){--card-glow:#e7e9ff}
     .about-visual:before{box-shadow:0 0 0 40px #2563eb14,0 0 0 90px #7778c918}
     .visual-lines{background:linear-gradient(125deg,transparent 40%,#2563eb30 40.2%,transparent 40.6%),linear-gradient(35deg,transparent 58%,#7778c92b 58.2%,transparent 58.5%)}
+    .research-stream{padding:clamp(76px,7vw,126px) 0;background:#f5f7fc}
+    .stream-head,.news-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:34px}
+    .stream-head .section-intro{max-width:470px}
+    .stream-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:2px solid #2563eb;border-left:2px solid #2563eb}
+    .stream-card{min-height:250px;padding:clamp(22px,3vw,40px);border-right:2px solid #2563eb;border-bottom:2px solid #2563eb;background:#fff;transition:background-color var(--motion-smooth) var(--motion-ease),color var(--motion-smooth) var(--motion-ease)}
+    .stream-card:hover{background:#f0f2ff}.stream-kicker{display:block;margin-bottom:30px;color:#7778c9;font-size:10px;font-weight:800;letter-spacing:.11em}
+    .stream-card h3{margin:0 0 12px;font-size:clamp(21px,2vw,29px);line-height:1.25;letter-spacing:-.045em}.stream-card p{margin:0;color:var(--muted);font-size:13px;line-height:1.8;word-break:keep-all}
+    .stream-link{display:inline-flex;align-items:center;gap:12px;margin-top:22px;color:#2563eb;font-size:12px;font-weight:700}.stream-link span{transition:transform var(--motion-smooth) var(--motion-ease)}.stream-link:hover span{transform:translate(3px,-3px)}
+    .news{padding:clamp(76px,7vw,126px) 0}.news-head .section-intro{max-width:440px}.news-list{border-top:2px solid #2563eb}.news-item{grid-template-columns:130px minmax(0,1fr) 110px;padding:22px 12px;border-bottom:1px solid #dce3ef}.news-type{display:block;color:#7778c9}.news-title{font-size:clamp(13px,1.2vw,16px);line-height:1.6}.news-date{color:#78849a}.news-more{margin-top:22px}
+    @media(max-width:800px){.stream-grid{grid-template-columns:1fr}.stream-card{min-height:0}.stream-kicker{margin-bottom:18px}}
+    @media(max-width:700px){.stream-head,.news-head{display:block}.stream-head .section-intro,.news-head .section-intro{margin-top:14px}.stream-card{padding:24px}.stream-card h3{font-size:23px}.stream-card p{font-size:12px}.news-item{grid-template-columns:76px minmax(0,1fr);gap:8px;padding:17px 4px}.news-date{grid-column:2;text-align:left}.news-type{grid-column:1;grid-row:1/3;font-size:9px}}
   </style>
 </head>
 <body>
@@ -273,7 +283,7 @@
   <header class="header">
     <div class="wrap nav">
       <a class="brand" href="#main" aria-label="강원ICT융합연구원 홈"><span class="brand-mark">GRIT</span><span class="brand-name"><strong>강원ICT융합연구원</strong><span>GANGWON ICT RESEARCH INSTITUTE</span></span></a>
-      <nav class="nav-links" id="nav-links" aria-label="주 메뉴"><a href="#about">센터 소개</a><a href="#expertise">연구 분야</a><a href="#dlab">연구 플랫폼</a><a href="#ax">지역 실증</a><a href="#research-projects">연구사업</a></nav>
+      <nav class="nav-links" id="nav-links" aria-label="주 메뉴"><a href="#about">센터 소개</a><a href="#expertise">연구 분야</a><a href="#dlab">연구 플랫폼</a><a href="#ax">지역 실증</a><a href="#research-stream">연구 주제</a><a href="#news">새 소식</a></nav>
       <div class="nav-actions"><span class="lang">KR&nbsp;⌄</span><a class="contact-link" href="#contact">찾아오시는 길 <span class="arrow">↗</span></a><button class="menu-toggle" id="menu-toggle" aria-label="메뉴 열기" aria-expanded="false">☰</button></div>
     </div>
   </header>
@@ -378,6 +388,33 @@
           <article class="project-card"><span class="project-kind">INDUSTRY · ACADEMIA · RESEARCH</span><h3>산학연 공동 연구개발</h3><p>지역 산업의 기술 수요를 연구 과제로 연결하고 융합기술 개발과 확산을 추진</p><a href="#expertise">연구 분야 살펴보기 <span>↗</span></a></article>
         </div>
         <a class="project-news-link" href="https://grit.kangwon.ac.kr/board/list?bmcode=notice" target="_blank" rel="noreferrer">연구원 공지·사업 소식 <span>↗</span></a>
+      </div>
+    </section>
+    <section class="research-stream" id="research-stream">
+      <div class="wrap">
+        <div class="stream-head">
+          <div><div class="eyebrow">RESEARCH IN PROGRESS</div><h2 class="section-title">연구는 기술로,<br>기술은 현장으로</h2></div>
+          <p class="section-intro">센터가 축적해 온 기술과 공개된 연구 주제를 소개합니다. 데이터와 플랫폼부터 산업·의료 현장의 적용까지, 연구가 어떻게 구체화되는지 살펴볼 수 있습니다.</p>
+        </div>
+        <div class="stream-grid">
+          <article class="stream-card"><span class="stream-kicker">AI PLATFORM · MLOPS</span><h3>D-Lab Flow<br>AI 개발 전 과정을 잇다</h3><p>데이터 수집과 라벨링, 모델 학습·최적화, 배포와 모니터링을 연결하는 AI 라이프사이클 플랫폼을 연구합니다.</p><a class="stream-link" href="https://grit.kangwon.ac.kr/contents?bmcode=tech" target="_blank" rel="noreferrer">플랫폼 기술 보기 <span>↗</span></a></article>
+          <article class="stream-card"><span class="stream-kicker">AI · HEALTHCARE</span><h3>의료 영상<br>정량 분석 알고리즘</h3><p>조직 이미지에서 세포와 항체 반응 영역을 분석해, 의료·바이오 분야의 영상 판독을 돕는 머신러닝 기술을 개발합니다.</p><a class="stream-link" href="https://grit.kangwon.ac.kr/contents?bmcode=tech" target="_blank" rel="noreferrer">의료 AI 연구 보기 <span>↗</span></a></article>
+          <article class="stream-card"><span class="stream-kicker">AIoT · FIELD DATA</span><h3>센서와 AI를<br>현장 데이터로 연결</h3><p>IoT 센서·디바이스의 데이터 수집과 원격 모니터링, 분석 기술을 산업 환경에 맞게 연구합니다.</p><a class="stream-link" href="https://grit.kangwon.ac.kr/contents?bmcode=tech" target="_blank" rel="noreferrer">IoT 융합 기술 보기 <span>↗</span></a></article>
+        </div>
+      </div>
+    </section>
+    <section class="news" id="news">
+      <div class="wrap">
+        <div class="news-head">
+          <div><div class="eyebrow">NEWS &amp; NOTICE</div><h2 class="section-title">연구원 새 소식</h2></div>
+          <p class="section-intro">연구사업 공고와 협력 소식, 연구원 소식을 확인하세요. 게시일과 모집 기간은 각 공지 원문을 기준으로 확인해 주세요.</p>
+        </div>
+        <div class="news-list">
+          <a class="news-item" href="https://grit.kangwon.ac.kr/board/view?bidx=282" target="_blank" rel="noreferrer"><span class="news-type">연구원 소식</span><strong class="news-title">강원ICT융합연구원 연구원 채용 공고</strong><time class="news-date" datetime="2026-09-08">2026.09.08</time></a>
+          <a class="news-item" href="https://grit.kangwon.ac.kr/board/view?bidx=279" target="_blank" rel="noreferrer"><span class="news-type">지역 사업</span><strong class="news-title">강원 바이오·헬스케어 AI 대전환 실증기업 모집 추가공고</strong><time class="news-date" datetime="2026-07-21">2026.07.21</time></a>
+          <a class="news-item" href="https://grit.kangwon.ac.kr/board/view?bidx=276" target="_blank" rel="noreferrer"><span class="news-type">인재·협력</span><strong class="news-title">강원 의료기기 인재성장·협업 지원사업 참여자 모집</strong><time class="news-date" datetime="2026-06-12">2026.06.12</time></a>
+        </div>
+        <a class="text-link news-more" href="https://grit.kangwon.ac.kr/board/list?bmcode=notice" target="_blank" rel="noreferrer">공지사항 전체 보기 <span class="arrow">↗</span></a>
       </div>
     </section>
     <section class="locations" id="contact"><div class="wrap"><div class="location-head"><div><div class="eyebrow">CONTACT GRIT</div><h2 class="section-title">연락처</h2></div><p class="section-intro">강릉 본원과 원주 분원의 위치와 대표 연락처를 안내합니다.</p></div><div class="location-grid"><div class="location-card"><span class="loc-tag">GANGNEUNG · MAIN</span><h3>강릉 본원</h3><p>강원특별자치도 강릉시 죽헌길 7, 강원대학교 강릉캠퍼스 공동실험실습관 503호<br>033-640-2870</p><a href="tel:033-640-2870">033-640-2870 ↗</a></div><div class="location-card"><span class="loc-tag">WONJU · BRANCH</span><h3>원주 분원</h3><p>강원특별자치도 원주시 지정면 기업도시로 200, 의료기기종합지원센터 405호<br>033-900-1110</p><a href="tel:033-900-1110">033-900-1110 ↗</a></div></div></div></section>
